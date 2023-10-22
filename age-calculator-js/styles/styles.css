@@ -1,0 +1,155 @@
+body,
+html {
+  height: 100%;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  font-size: 34px;
+}
+
+.card {
+  background-color: white;
+  padding: 3rem;
+  width: 75vw;
+  border-radius: 2rem;
+  border-bottom-right-radius: 150px;
+}
+.date-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin: auto 0;
+}
+.date-input {
+  all: unset;
+  border-radius: 10px;
+  width: 15vw;
+  height: 50px;
+  border: 2px solid #cccccc;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.date-input:focus {
+  border: 2px solid #888888;
+}
+
+.date-label {
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: end;
+}
+.date-error {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+  color: red;
+  font-size: 12px;
+}
+.submit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1rem 0;
+}
+.separator {
+  width: 100%;
+  flex: 1;
+  border-top: 1px solid #ececec;
+}
+.submit-btn {
+  border-radius: 50%;
+  border: none;
+  width: 75px;
+  height: 75px;
+  margin-right: 10%;
+  background-color: hsl(259, 100%, 65%);
+}
+.submit-btn:active {
+  background-color: hsl(259, 80%, 55%);
+  box-shadow: inset -1px -1px 5px #555;
+}
+.submit-btn:before {
+  padding-top: 0.9rem;
+  font-size: 2rem;
+  content: "\2304";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.text-wrapper {
+  font-weight: 700;
+  font-size: 48px;
+}
+.dynamic-date {
+  color: hsl(259, 100%, 65%);
+  font-size: 52px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  .submit-wrapper {
+    margin: 2.2rem 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .submit-btn {
+    position: absolute;
+    bottom: 50%;
+    margin-right: 0;
+  }
+}
